@@ -108,14 +108,19 @@ class Brick:
 		#Compute euler angles for vectors
 		#check for dividing by zero, which is common bc tan(pi/2) = Inf
 		if self.axis1.x==0:
-			yaw = math.pi/2
+			self.yaw = math.pi/2
 		else:
-			yaw = math.atan(self.axis1.y / self.axis1.x)	
-		if self.axis1.y==0:
-			pitch = math.pi/2
+			self.yaw = math.atan(self.axis1.y / self.axis1.x)
+
+		axis1ProjectionXY = math.sqrt(self.axis1.x**2+self.axis1.y**2)
+		if self.axis1ProjectionXY==0:
+			self.pitch = 0
 		else:
-			self.pitch = math.atan(self.axis1.z / math.sqrt(self.axis1.x**2+self.axis1.y**2))
-		use relation b/w crossproduct and cosine to get angle between v2 and z axis
+			self.pitch = math.atan(self.axis1.z / axis1ProjectionXY)
+		
+		#use relation b/w crossproduct and cosine to get angle between v2 and z axis
+		self.roll  = numpy.linalg.norm(numpy.dot(self.axis2.vector(),[0,0,1])) \
+				/ (self.axis2.length())
 
 		print "\tyaw: " + str(self.yaw) + " pitch: " + str(self.pitch) + " roll: " + str(self.roll)
 
@@ -145,8 +150,12 @@ class Brick:
 		ax.scatter(X, Y, Z, c='r',marker='o')
 
 		#plot brick axes
-		ax.plot([0,self.axis1.x],[0,self.axis1.y],[0,self.axis1.z],'b')
-		ax.plot([0,self.axis2.x],[0,self.axis2.y],[0,self.axis2.z],'g')
+		ax.plot([self.coordinates[0].x,self.coordinates[0].x - self.axis1.x],
+				[self.coordinates[0].y,self.coordinates[0].y - self.axis1.y],
+				[self.coordinates[0].z,self.coordinates[0].z - self.axis1.z],'b')
+		ax.plot([self.coordinates[0].x,self.coordinates[0].x - self.axis2.x],
+				[self.coordinates[0].y,self.coordinates[0].y - self.axis2.y],
+				[self.coordinates[0].z,self.coordinates[0].z - self.axis2.z],'g')
 
 		#add label
 		ax.set_xlabel('x axis')
