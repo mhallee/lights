@@ -38,23 +38,29 @@ brickLength = float(sys.argv[4])
 brickWidth  = float(sys.argv[5])
 brickHeight = float(sys.argv[6])
 baseLength  = float(sys.argv[7])
-baseHeight  = float(sys.argv[8])
-baseWidth   = float(sys.argv[9])
+baseWidth  = float(sys.argv[8])
+baseHeight   = float(sys.argv[9])
 
 #Read data from files
 cdBaseFile = open(cdBaseName, 'r')
 cdBrickFile = open(cdBricksName, 'r')
 cdBaseText = cdBaseFile.read()
+print "***************************"
+print cdBaseText
+print "***************************"
 cdBrickText = cdBrickFile.read()
 
 #Extract vertex points on base
 pattern = re.compile("Vertices:\\n(.*?);",re.DOTALL)
 baseMatches = re.findall(pattern,cdBaseText)
+print "base match count" + str(len(baseMatches))
 brickMatches = re.findall(pattern, cdBrickText)
 
 
 #Based on the .cd file type, every match is a set of vertices for a single
 # mesh (brick).  Make these bricks
+print "###############################################"
+print "Importing Data"
 print "###############################################"
 print "Importing Base Unit Geometry"
 baseBricks = []

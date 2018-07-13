@@ -72,8 +72,8 @@ class Brick:
 	def computeQuaternion(self):
 		THRESHOLD = 0.001 #0.1% threshold for equality
 
-		print self.length
-		print self.width
+		print "\t\tLength: " + str(self.length)
+		print "\t\tWidth: " + str(self.width)
 		#pick a random corner to compare to
 		initial = self.coordinates[0]
 		self.axis1 = Coordinate()
@@ -82,19 +82,18 @@ class Brick:
 		#find two normal vectors to brick
 		for indexedPoint in self.coordinates:
 			distanceTo = indexedPoint.seperation(initial)
-			print distanceTo
 			if (distanceTo < self.length*(1+THRESHOLD) and
 				distanceTo > self.length*(1-THRESHOLD)):
 				self.axis1.x = initial.x - indexedPoint.x
 				self.axis1.y = initial.y - indexedPoint.y
 				self.axis1.z = initial.z - indexedPoint.z
-				print "Found axis1"
+				print "\t\tFound axis1"
 			if (distanceTo < self.width*(1+THRESHOLD) and
 				distanceTo > self.width*(1-THRESHOLD)):
 				self.axis2.x = initial.x - indexedPoint.x
 				self.axis2.y = initial.y - indexedPoint.y
 				self.axis2.z = initial.z - indexedPoint.z
-				print "Found axis2"
+				print "\t\tFound axis2"
 
 		self.plot() #TAKE THIS OUT
 
@@ -102,8 +101,8 @@ class Brick:
 			raise Exception("Error detecting a sides of length " 
 				+ str(self.length) + " on brick \n" + str(self) + "\nAborting run.")
 
-		print "axis1: " + str(self.axis1)
-		print "axis2: " + str(self.axis2)
+		print "\t\taxis1: " + str(self.axis1)
+		print "\t\taxis2: " + str(self.axis2)
 
 		#Compute euler angles for vectors
 		#check for dividing by zero, which is common bc tan(pi/2) = Inf
@@ -113,7 +112,7 @@ class Brick:
 			self.yaw = math.atan(self.axis1.y / self.axis1.x)
 
 		axis1ProjectionXY = math.sqrt(self.axis1.x**2+self.axis1.y**2)
-		if self.axis1ProjectionXY==0:
+		if axis1ProjectionXY==0:
 			self.pitch = 0
 		else:
 			self.pitch = math.atan(self.axis1.z / axis1ProjectionXY)
@@ -122,7 +121,7 @@ class Brick:
 		self.roll  = numpy.linalg.norm(numpy.dot(self.axis2.vector(),[0,0,1])) \
 				/ (self.axis2.length())
 
-		print "\tyaw: " + str(self.yaw) + " pitch: " + str(self.pitch) + " roll: " + str(self.roll)
+		print "\t\tyaw: " + str(self.yaw) + " pitch: " + str(self.pitch) + " roll: " + str(self.roll)
 
 
 	def __str__(self):
