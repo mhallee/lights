@@ -51,7 +51,7 @@ print "***************************"
 cdBrickText = cdBrickFile.read()
 
 #Extract vertex points on base
-pattern = re.compile("Vertices:\\n(.*?);",re.DOTALL)
+pattern = re.compile("Vertices:(\r?\n)(.*?);",re.DOTALL)
 baseMatches = re.findall(pattern,cdBaseText)
 print "base match count" + str(len(baseMatches))
 brickMatches = re.findall(pattern, cdBrickText)

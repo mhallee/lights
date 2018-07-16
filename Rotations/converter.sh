@@ -11,7 +11,7 @@ do
 	if test -f "$file"
 	then
 		echo "   $file"
-		#cat $file | tr -d "\r" > Results/$file
+		cat $file | tr -d "\r" > Results/$file
 	fi
 done
 echo "Process complete. Check \"Results\" folder for new files."
