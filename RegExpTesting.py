@@ -34,12 +34,12 @@ from Brick import Brick
 cdBaseName   = sys.argv[1]
 cdBricksName = sys.argv[2]
 LIGGGHTSName = sys.argv[3]
-brickLength = float(sys.argv[4])
-brickWidth  = float(sys.argv[5])
-brickHeight = float(sys.argv[6])
-baseLength  = float(sys.argv[7])
-baseWidth  = float(sys.argv[8])
-baseHeight   = float(sys.argv[9])
+baseLength  = float(sys.argv[4])
+baseWidth   = float(sys.argv[5])
+baseHeight  = float(sys.argv[6])
+brickLength = float(sys.argv[7])
+brickWidth  = float(sys.argv[8])
+brickHeight = float(sys.argv[9])
 
 #Read data from files
 cdBaseFile = open(cdBaseName, 'r')

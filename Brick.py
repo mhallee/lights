@@ -87,13 +87,13 @@ class Brick:
 				self.axis1.x = initial.x - indexedPoint.x
 				self.axis1.y = initial.y - indexedPoint.y
 				self.axis1.z = initial.z - indexedPoint.z
-				print "\t\tFound axis1"
+				print "\t\tFound axis1:  Initial Point " + str(initial) + ", Match Point " + str(indexedPoint)
 			if (distanceTo < self.width*(1+THRESHOLD) and
 				distanceTo > self.width*(1-THRESHOLD)):
 				self.axis2.x = initial.x - indexedPoint.x
 				self.axis2.y = initial.y - indexedPoint.y
 				self.axis2.z = initial.z - indexedPoint.z
-				print "\t\tFound axis2"
+				print "\t\tFound axis2:  Initial Point " + str(initial) + ", Match Point " + str(indexedPoint)
 
 		self.plot() #TAKE THIS OUT
 
@@ -131,7 +131,7 @@ class Brick:
 		for coordinate in self.coordinates:
 			stringRep = stringRep + (str(coordinate.x) + ','
 			+ str(coordinate.y) + ',' 
-			+ str(coordinate.z) + '\n')
+			+ str(coordinate.z) + '\n')	
 		return stringRep
 
 	def plot(self):
