@@ -21,6 +21,9 @@ class Brick:
 		self.length = length
 		self.width = width
 
+		print "__init__ text: "
+		print text
+		print type(text)
 		text = re.sub('\t','',text)
 		text = re.sub(':', '', text)
 

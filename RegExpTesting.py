@@ -54,8 +54,9 @@ cdBrickText = cdBrickFile.read()
 pattern = re.compile("Vertices:(\r?\n)(.*?);",re.DOTALL)
 baseMatches = re.findall(pattern,cdBaseText)
 print "base match count" + str(len(baseMatches))
+print "basematches [0] type" + str(type(baseMatches[0]))
 brickMatches = re.findall(pattern, cdBrickText)
-
+print "brickMatches [0] type" + str(type(brickMatches[0]))
 
 #Based on the .cd file type, every match is a set of vertices for a single
 # mesh (brick).  Make these bricks
@@ -66,6 +67,7 @@ print "Importing Base Unit Geometry"
 baseBricks = []
 counter = 0
 for coordinateText in baseMatches:
+	print "coordinate text type" + str(type(coordinateText))
 	baseBricks.append(Brick(coordinateText,baseLength,baseWidth))
 	counter += 1
 	print "\t" +str(counter) + " base units imported."
@@ -85,5 +87,5 @@ print "#################TEST CASES####################"
 print baseBricks[0]
 print "All Coordinates"
 print "Centroid:"
-print baseBricks[0].centroid()	
+print baseBricks[0].centroid()
 
