@@ -10,7 +10,7 @@ from Quaternion import Quaternion
 
 class Brick:
 	"""Represents a single brick with 8 vertices"""
-	def __init__(self,text,length,width):
+	def __init__(self,text,length,width,height):
 		"""	Generates a new brick based on a text list of coordinates
 		where each potential vertex is stored on a new line with
 		numbers seperated by commas, i.e.
@@ -19,11 +19,9 @@ class Brick:
 		3.0,4.0,5.0
 		"""
 		self.length = length
-		self.width = width
+		self.width  = width
+		self.height = height
 
-		print "__init__ text: "
-		print text
-		print type(text)
 		text = re.sub('\t','',text)
 		text = re.sub(':', '', text)
 
@@ -76,13 +74,13 @@ class Brick:
 		THRESHOLD = 0.001 #0.1% threshold for equality
 
 		print "\t\tLength: " + str(self.length)
-		print "\t\tWidth: " + str(self.width)
+		print "\t\tHeight: " + str(self.height)
 		#pick a random corner to compare to
 		initial = self.coordinates[0]
 		self.axis1 = Coordinate()
 		self.axis2 = Coordinate() #using Coordinates to reflect vectors
 
-		#find two normal vectors to brick
+		#find two normal vectors (ie edges) to brick
 		for indexedPoint in self.coordinates:
 			distanceTo = indexedPoint.seperation(initial)
 			if (distanceTo < self.length*(1+THRESHOLD) and
@@ -90,15 +88,15 @@ class Brick:
 				self.axis1.x = initial.x - indexedPoint.x
 				self.axis1.y = initial.y - indexedPoint.y
 				self.axis1.z = initial.z - indexedPoint.z
-				print "\t\tFound axis1:  Initial Point " + str(initial) + ", Match Point " + str(indexedPoint)
-			if (distanceTo < self.width*(1+THRESHOLD) and
-				distanceTo > self.width*(1-THRESHOLD)):
+				print "\t\tFound axis1:  Initial Point " \
+					+ str(initial) + ", Match Point " + str(indexedPoint)
+			if (distanceTo < self.height*(1+THRESHOLD) and
+				distanceTo > self.height*(1-THRESHOLD)):
 				self.axis2.x = initial.x - indexedPoint.x
 				self.axis2.y = initial.y - indexedPoint.y
 				self.axis2.z = initial.z - indexedPoint.z
-				print "\t\tFound axis2:  Initial Point " + str(initial) + ", Match Point " + str(indexedPoint)
-
-		self.plot() #TAKE THIS OUT
+				print "\t\tFound axis2:  Initial Point " + str(initial) \
+					+ ", Match Point " + str(indexedPoint)
 
 		if self.axis1.isZero() or self.axis2.isZero():
 			raise Exception("Error detecting a sides of length " 
@@ -107,25 +105,52 @@ class Brick:
 		print "\t\taxis1: " + str(self.axis1)
 		print "\t\taxis2: " + str(self.axis2)
 
-		#Compute euler angles for vectors
+		#COMPUTE EULER ANGLES OF BRICK ROTATION FROM VECTOR AXES
 		#check for dividing by zero, which is common bc tan(pi/2) = Inf
 		if self.axis1.x==0:
-			self.yaw = math.pi/2
+			self.heading = math.pi/2
 		else:
-			self.yaw = math.atan(self.axis1.y / self.axis1.x)
+			self.heading = math.atan(self.axis1.y / self.axis1.x)
 
 		axis1ProjectionXY = math.sqrt(self.axis1.x**2+self.axis1.y**2)
 		if axis1ProjectionXY==0:
-			self.pitch = 0
+			self.attitude = 0
 		else:
-			self.pitch = math.atan(self.axis1.z / axis1ProjectionXY)
+			self.attitude = math.atan(self.axis1.z / axis1ProjectionXY)
 		
 		#use relation b/w crossproduct and cosine to get angle between v2 and z axis
-		self.roll  = numpy.linalg.norm(numpy.dot(self.axis2.vector(),[0,0,1])) \
-				/ (self.axis2.length())
+		cosRollAngle  = numpy.linalg.norm(numpy.dot(self.axis2.vector(),[0,0,1])) \
+				/ self.axis2.length()
+		self.bank = math.acos(cosRollAngle)
 
-		print "\t\tyaw: " + str(self.yaw) + " pitch: " + str(self.pitch) + " roll: " + str(self.roll)
+		#DISPLAY ANGLES IN DEGREES (this can be removed)
+		print "\t\theading: " + str(self.heading) + " attitude: " + str(self.attitude) \
+			+ " bank: " + str(self.bank)
+		headingDeg = self.heading * 360 / (2 * math.pi)
+		attitudeDeg = self.attitude * 360 / (2 * math.pi)
+		bankDeg = self.bank * 360 / (2 * math.pi)
+		print "\t\theading (Degrees): " + str(headingDeg) + " attitude (Degrees): " \
+			+ str(attitudeDeg) + " bank (Degrees): " + str(bankDeg)
 
+		#CONVERT FROM EULER TO QUATERNION
+		#Using code from http://www.euclideanspace.com/maths/geometry/rotations/  .....
+		#(continuing link from above)  ...  conversions/eulerToQuaternion/index.htm
+		c1 = math.cos(self.heading / 2)
+		s1 = math.sin(self.heading / 2)
+		c2 = math.cos(self.attitude / 2)
+		s2 = math.sin(self.attitude / 2)
+		c3 = math.cos(self.bank / 2)
+		s3 = math.sin(self.bank / 2)
+		c1c2 = c1*c2
+		s1s2 = s1*s2
+		self.qw =c1c2*c3 - s1s2*s3
+		self.qx =c1c2*s3 + s1s2*c3
+		self.qy =s1*c2*c3 + c1*s2*s3
+		self.qz =c1*s2*c3 - s1*c2*s3
+		print "\t\tQUATERNION: w " + str(self.qw) + "; x " + str(self.qx) \
+			+ "; y " + str(self.qy) + "; z " + str(self.qz)
+
+		self.plot() #TAKE THIS OUT
 
 	def __str__(self):
 		"""The string representation of a brick is coordinate

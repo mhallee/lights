@@ -1,23 +1,23 @@
-# RegExpTest.py
-# Mitchell Hallee
-# Takes 3 arguments: the name of the file containing base points
-#
-
-
-
-
 """RegExpTest.py
 
 Converts Rhino-output 3D brick model into LIGGGHTS input form
 Usable on rectangular prisms only
 
+Length, Width, Height will correspond to x,y,z dimensions of the brick
+
+
 Args:
 cdBaseName:	  	Name of .cd file containing base bricks
 cdBricksName: 	Name of the .cd file containing other bricks
 LIGGGHTSName: 	The name of the file to be created with LIGGGHTS input
-Length: 	  	Property of the bricks
-Width:			Property of the bricks
-Height:			Property of the bricks
+baseLength: 	Dimension of base units' longest edge
+baseWidth:		Dimension of base units' second longest edge
+baseHeight:		Dimension of base units' shortest edge
+brickLength: 	Dimension of bricks' longest edge
+brickWidth:		Dimension of bricks' second longest edge
+brickHeight:	Dimension of bricks' shortest edge
+
+A note about length/width/height and computing angles:
 
 Raises:
 
@@ -45,18 +45,12 @@ brickHeight = float(sys.argv[9])
 cdBaseFile = open(cdBaseName, 'r')
 cdBrickFile = open(cdBricksName, 'r')
 cdBaseText = cdBaseFile.read()
-print "***************************"
-print cdBaseText
-print "***************************"
 cdBrickText = cdBrickFile.read()
 
 #Extract vertex points on base
 pattern = re.compile("Vertices:\r?\n(.*?);",re.DOTALL)
 baseMatches = re.findall(pattern,cdBaseText)
-print "base match count" + str(len(baseMatches))
-print "basematches [0] type" + str(type(baseMatches[0]))
 brickMatches = re.findall(pattern, cdBrickText)
-print "brickMatches [0] type" + str(type(brickMatches[0]))
 
 #Based on the .cd file type, every match is a set of vertices for a single
 # mesh (brick).  Make these bricks
@@ -68,7 +62,7 @@ baseBricks = []
 counter = 0
 for coordinateText in baseMatches:
 	print "coordinate text type" + str(type(coordinateText))
-	baseBricks.append(Brick(coordinateText,baseLength,baseWidth))
+	baseBricks.append(Brick(coordinateText,baseLength,baseWidth,baseHeight))
 	counter += 1
 	print "\t" +str(counter) + " base units imported."
 print "\tComplete. Switching to bricks...\n"
@@ -77,7 +71,7 @@ print "Importing Brick Geometry"
 bricks = []
 counter = 0
 for coordinateText in brickMatches:
-	bricks.append(Brick(coordinateText,brickLength,brickWidth))
+	bricks.append(Brick(coordinateText,brickLength,brickWidth,brickHeight))
 	counter += 1
 	print "\t" + str(counter) + " bricks imported."
 print "###############################################\n"
