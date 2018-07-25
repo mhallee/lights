@@ -54,21 +54,26 @@ class Brick:
 				and self.coordinates.z == other.coordinates.z 
 			)
 
-	def centroid(self):
-		"""Returns a coordinate object describing the brick's centroid"""		
-		sumX = 0.0
-		sumY = 0.0
-		sumZ = 0.0
+	def getCentroid(self):
+		"""Returns a coordinate object describing the brick's centroid"""
+		try: 
+			return self.centroid
+		except AttributeError:	
+			sumX = 0.0
+			sumY = 0.0
+			sumZ = 0.0
 
-		#the coordinates of the centroid are the average of the vertices
-		for coordinate in self.coordinates:
-			sumX += coordinate.x
-			sumY += coordinate.y
-			sumZ += coordinate.z
+			#the coordinates of the centroid are the average of the vertices
+			for coordinate in self.coordinates:
+				sumX += coordinate.x
+				sumY += coordinate.y
+				sumZ += coordinate.z
 
-		return Coordinate(sumX / len(self.coordinates),
-						  sumY / len(self.coordinates),
-						  sumZ / len(self.coordinates))
+			self.centroid = Coordinate(sumX / len(self.coordinates),
+							  sumY / len(self.coordinates),
+							  sumZ / len(self.coordinates))
+
+			return self.centroid
 
 	def computeQuaternion(self):
 		THRESHOLD = 0.001 #0.1% threshold for equality
@@ -118,6 +123,9 @@ class Brick:
 		else:
 			self.attitude = math.atan(self.axis1.z / axis1ProjectionXY)
 		
+#THIS CALCULATION OF BANK IS WRONG.  COMPARING v2 and z is close, but consider a situation
+#with just rotation around the y axis.  no bank should occur, but it would still register
+#need to think of a more accurate way to describe this angle 
 		#use relation b/w crossproduct and cosine to get angle between v2 and z axis
 		cosRollAngle  = numpy.linalg.norm(numpy.dot(self.axis2.vector(),[0,0,1])) \
 				/ self.axis2.length()

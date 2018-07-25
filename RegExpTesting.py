@@ -41,7 +41,15 @@ brickLength = float(sys.argv[7])
 brickWidth  = float(sys.argv[8])
 brickHeight = float(sys.argv[9])
 
-#Read data from files
+#Check if output file already exists
+try:
+	f = open(LIGGGHTSName, 'r')
+except IOError:
+	print LIGGGHTSName + " does not yet exist, so it will be created"
+else:
+    t = raw_input(LIGGGHTSName + " already exists.  It will be written over.  Press ENTER to continue...")
+
+#Read data from  infiles
 cdBaseFile = open(cdBaseName, 'r')
 cdBrickFile = open(cdBricksName, 'r')
 cdBaseText = cdBaseFile.read()
@@ -74,12 +82,39 @@ for coordinateText in brickMatches:
 	bricks.append(Brick(coordinateText,brickLength,brickWidth,brickHeight))
 	counter += 1
 	print "\t" + str(counter) + " bricks imported."
-print "###############################################\n"
 
-#Testing centroid units
-print "#################TEST CASES####################"
-print baseBricks[0]
-print "All Coordinates"
-print "Centroid:"
-print baseBricks[0].centroid()
+print "\n###############################################"
+print "Exporting Data"
+print "###############################################"
+outputFile = open(LIGGGHTSName, 'w')
 
+atomID = 1
+brickDensity = 2400 #g/cm
+baseDensity = 2400 #g/cm
+
+outputFile.write("#Brick/Wall Atoms\n")
+for brick in bricks:
+	#first line creats the atom at location, "creat_atoms" command
+	outputFile.write("create_atoms 1 single " + str(brick.getCentroid().x) + " " 
+		+ str(brick.getCentroid().y) + " " + str(brick.getCentroid().z) + "\n")
+	#second line defines properties, "set atom" command
+	outputFile.write("set atom " + str(atomID) + " type 1 shape " + str(brickLength) 
+		+ " " + str(brickWidth) + " " + str(brickHeight) + " blockiness 4.0 4.0 density " 
+		+ str(brickDensity) + " quat 1 0 0 0\n")
+	#!!!!!!NOTE: ZERO ROTATION HARDCODED IN LINE ABOVE!!!!!!
+	print "\texported particle " + str(atomID) + " (brick)"
+	atomID += 1
+
+outputFile.write("\n#Base Atoms\n")
+for base in baseBricks:
+	#first line creats the atom at location, "creat_atoms" command
+	outputFile.write("create_atoms 1 single " + str(base.getCentroid().x) + " " 
+		+ str(base.getCentroid().y) + " " + str(base.getCentroid().z) + "\n")
+	#second line defines properties, "set atom" command
+	outputFile.write("set atom " + str(atomID) + " type 1 shape " + str(baseLength) 
+		+ " " + str(baseWidth) + " " + str(baseHeight) + " blockiness 4.0 4.0 density " 
+		+ str(baseDensity)  + " quat 1 0 0 0\n")
+	#!!!!!!NOTE: ZERO ROTATION HARDCODED IN LINE ABOVE!!!!!!
+	print "\texported particle " + str(atomID) + " (base)"
+	atomID += 1
+print "Exporting complete."
