@@ -1,169 +1,169 @@
 #Brick/Wall Atoms
 create_atoms 1 single 0.8685 0.045 0.5775
-set atom 1 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 1 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.6755 0.045 0.5775
-set atom 2 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 2 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.4825 0.045 0.5775
-set atom 3 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 3 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.2895 0.045 0.5775
-set atom 4 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 4 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.772 0.045 0.5225
-set atom 5 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 5 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.579 0.045 0.5225
-set atom 6 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 6 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.386 0.045 0.5225
-set atom 7 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 7 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.193 0.045 0.5225
-set atom 8 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 8 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.8685 0.045 0.4675
-set atom 9 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 9 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.6755 0.045 0.4675
-set atom 10 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 10 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.4825 0.045 0.4675
-set atom 11 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 11 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.2895 0.045 0.4675
-set atom 12 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 12 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.0965 0.045 0.4675
-set atom 13 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 13 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.772 0.045 0.4125
-set atom 14 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 14 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.579 0.045 0.4125
-set atom 15 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 15 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.386 0.045 0.4125
-set atom 16 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 16 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.193 0.045 0.4125
-set atom 17 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 17 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.8685 0.045 0.3575
-set atom 18 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 18 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.6755 0.045 0.3575
-set atom 19 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 19 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.4825 0.045 0.3575
-set atom 20 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 20 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.2895 0.045 0.3575
-set atom 21 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 21 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.0965 0.045 0.3575
-set atom 22 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 22 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.772 0.045 0.3025
-set atom 23 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 23 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.579 0.045 0.3025
-set atom 24 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 24 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.386 0.045 0.3025
-set atom 25 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 25 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.193 0.045 0.3025
-set atom 26 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 26 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.8685 0.045 0.2475
-set atom 27 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 27 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.6755 0.045 0.2475
-set atom 28 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 28 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.4825 0.045 0.2475
-set atom 29 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 29 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.2895 0.045 0.2475
-set atom 30 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 30 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.0965 0.045 0.2475
-set atom 31 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 31 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.772 0.045 0.1925
-set atom 32 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 32 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.579 0.045 0.1925
-set atom 33 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 33 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.386 0.045 0.1925
-set atom 34 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 34 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.193 0.045 0.1925
-set atom 35 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 35 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.8685 0.045 0.1375
-set atom 36 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 36 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.6755 0.045 0.1375
-set atom 37 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 37 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.4825 0.045 0.1375
-set atom 38 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 38 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.2895 0.045 0.1375
-set atom 39 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 39 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.0965 0.045 0.1375
-set atom 40 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 40 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 1.4475 0.045 0.0275
-set atom 41 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 41 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 1.2545 0.045 0.5775
-set atom 42 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 42 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 1.0615 0.045 0.5775
-set atom 43 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 43 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 1.351 0.045 0.5225
-set atom 44 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 44 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 1.158 0.045 0.5225
-set atom 45 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 45 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.965 0.045 0.5225
-set atom 46 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 46 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 1.4475 0.045 0.4675
-set atom 47 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 47 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 1.2545 0.045 0.4675
-set atom 48 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 48 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 1.0615 0.045 0.4675
-set atom 49 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 49 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 1.351 0.045 0.4125
-set atom 50 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 50 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 1.158 0.045 0.4125
-set atom 51 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 51 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.965 0.045 0.4125
-set atom 52 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 52 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 1.4475 0.045 0.3575
-set atom 53 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 53 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 1.2545 0.045 0.3575
-set atom 54 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 54 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 1.0615 0.045 0.3575
-set atom 55 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 55 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 1.351 0.045 0.3025
-set atom 56 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 56 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 1.158 0.045 0.3025
-set atom 57 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 57 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.965 0.045 0.3025
-set atom 58 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 58 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 1.4475 0.045 0.2475
-set atom 59 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 59 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 1.2545 0.045 0.2475
-set atom 60 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 60 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 1.0615 0.045 0.2475
-set atom 61 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 61 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 1.351 0.045 0.1925
-set atom 62 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 62 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 1.158 0.045 0.1925
-set atom 63 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 63 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.965 0.045 0.1925
-set atom 64 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 64 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 1.4475 0.045 0.1375
-set atom 65 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 65 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 1.2545 0.045 0.1375
-set atom 66 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 66 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 1.0615 0.045 0.1375
-set atom 67 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 67 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 1.351 0.045 0.0825
-set atom 68 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 68 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 1.158 0.045 0.0825
-set atom 69 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 69 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.965 0.045 0.0825
-set atom 70 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 70 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.772 0.045 0.0825
-set atom 71 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 71 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.579 0.045 0.0825
-set atom 72 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 72 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.386 0.045 0.0825
-set atom 73 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 73 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.193 0.045 0.0825
-set atom 74 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 74 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 1.2545 0.045 0.0275
-set atom 75 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 75 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 1.0615 0.045 0.0275
-set atom 76 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 76 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.8685 0.045 0.0275
-set atom 77 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 77 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.6755 0.045 0.0275
-set atom 78 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 78 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.4825 0.045 0.0275
-set atom 79 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 79 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.2895 0.045 0.0275
-set atom 80 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 80 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 0.0965 0.045 0.0275
-set atom 81 type 1 shape 0.193 0.09 0.055 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 81 type 1 shape 0.0965 0.045 0.0275 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 
 #Base Atoms
 create_atoms 1 single 0.24125 0.045 -0.124518
-set atom 82 type 1 shape 0.868 0.09 0.109 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 82 type 1 shape 0.434 0.045 0.0545 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
 create_atoms 1 single 1.10975 0.045 -0.054518
-set atom 83 type 1 shape 0.868 0.09 0.109 blockiness 4.0 4.0 density 2400 quat 1 0 0 0
+set atom 83 type 1 shape 0.434 0.045 0.0545 blockiness 4.0 4.0 density 2400 quat 1 0 0 0

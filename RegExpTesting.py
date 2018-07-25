@@ -98,8 +98,8 @@ for brick in bricks:
 	outputFile.write("create_atoms 1 single " + str(brick.getCentroid().x) + " " 
 		+ str(brick.getCentroid().y) + " " + str(brick.getCentroid().z) + "\n")
 	#second line defines properties, "set atom" command
-	outputFile.write("set atom " + str(atomID) + " type 1 shape " + str(brickLength) 
-		+ " " + str(brickWidth) + " " + str(brickHeight) + " blockiness 4.0 4.0 density " 
+	outputFile.write("set atom " + str(atomID) + " type 1 shape " + str(brickLength/2) 
+		+ " " + str(brickWidth/2) + " " + str(brickHeight/2) + " blockiness 4.0 4.0 density " 
 		+ str(brickDensity) + " quat 1 0 0 0\n")
 	#!!!!!!NOTE: ZERO ROTATION HARDCODED IN LINE ABOVE!!!!!!
 	print "\texported particle " + str(atomID) + " (brick)"
@@ -111,8 +111,8 @@ for base in baseBricks:
 	outputFile.write("create_atoms 1 single " + str(base.getCentroid().x) + " " 
 		+ str(base.getCentroid().y) + " " + str(base.getCentroid().z) + "\n")
 	#second line defines properties, "set atom" command
-	outputFile.write("set atom " + str(atomID) + " type 1 shape " + str(baseLength) 
-		+ " " + str(baseWidth) + " " + str(baseHeight) + " blockiness 4.0 4.0 density " 
+	outputFile.write("set atom " + str(atomID) + " type 1 shape " + str(baseLength/2) 
+		+ " " + str(baseWidth/2) + " " + str(baseHeight/2) + " blockiness 4.0 4.0 density " 
 		+ str(baseDensity)  + " quat 1 0 0 0\n")
 	#!!!!!!NOTE: ZERO ROTATION HARDCODED IN LINE ABOVE!!!!!!
 	print "\texported particle " + str(atomID) + " (base)"
