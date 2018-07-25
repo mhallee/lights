@@ -76,7 +76,7 @@ class Brick:
 			return self.centroid
 
 	def computeQuaternion(self):
-		THRESHOLD = 0.001 #0.1% threshold for equality
+		THRESHOLD = 0.001 # 0.1% threshold for equality
 
 		print "\t\tLength: " + str(self.length)
 		print "\t\tHeight: " + str(self.height)
@@ -103,9 +103,13 @@ class Brick:
 				print "\t\tFound axis2:  Initial Point " + str(initial) \
 					+ ", Match Point " + str(indexedPoint)
 
-		if self.axis1.isZero() or self.axis2.isZero():
+		if self.axis1.isZero():
 			raise Exception("Error detecting a sides of length " 
 				+ str(self.length) + " on brick \n" + str(self) + "\nAborting run.")
+
+		if self.axis1.isZero() or self.axis2.isZero():
+			raise Exception("Error detecting a sides of length " 
+				+ str(self.height) + " on brick \n" + str(self) + "\nAborting run.")
 
 		print "\t\taxis1: " + str(self.axis1)
 		print "\t\taxis2: " + str(self.axis2)
@@ -158,7 +162,7 @@ class Brick:
 		print "\t\tQUATERNION: w " + str(self.qw) + "; x " + str(self.qx) \
 			+ "; y " + str(self.qy) + "; z " + str(self.qz)
 
-		self.plot() #TAKE THIS OUT
+		#self.plot() #TAKE THIS OUT
 
 	def __str__(self):
 		"""The string representation of a brick is coordinate
